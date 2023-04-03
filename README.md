@@ -10,4 +10,8 @@
 aws dynamodb create-table --cli-input-json file://create-table.json
 ```
 
+<p>Na mesma condiçao acima, para inserir itens na tabela executei o comando a seguir:</p>
 
+```
+aws dynamodb batch-write-item --request-items file://put-items.json
+```
