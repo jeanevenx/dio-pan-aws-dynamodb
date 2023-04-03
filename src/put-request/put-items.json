@@ -1,0 +1,41 @@
+{
+    "book": [
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {"S": "001"},
+            "title": {"S": "The Great Gatsby"},
+            "author": {"S": "F. Scott Fitzgerald"},
+            "genre": {"S": "Classic"},
+            "published_year": {"N": "1925"},
+            "publisher": {"S": "Scribner"}
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {"S": "002"},
+            "title": {"S": "To Kill a Mockingbird"},
+            "author": {"S": "Harper Lee"},
+            "genre": {"S": "Classic"},
+            "published_year": {"N": "1960"},
+            "publisher": {"S": "J. B. Lippincott & Co."}
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {"S": "003"},
+            "title": {"S": "1984"},
+            "author": {"S": "George Orwell"},
+            "genre": {"S": "Science Fiction"},
+            "published_year": {"N": "1949"},
+            "publisher": {"S": "Secker & Warburg"}
+          }
+        }
+      }
+    ]
+  }
+  

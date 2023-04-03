@@ -1,0 +1,18 @@
+{
+    "book": [
+      {
+        "PutRequest": {
+            "Item": {
+                "id": {"S": "004"},
+                "title": {"S": "Harry Potter and the Order of the Phoenix"},
+                "author": {"S": "J. K. Rowling"},
+                "genre": {"S": "fantasia, ficção, aventura"},
+                "published_year": {"N": "1995"},
+                "publisher": {"S": "Bloomsbury"}
+              }
+            }
+        }
+    
+    ]
+  }
+  

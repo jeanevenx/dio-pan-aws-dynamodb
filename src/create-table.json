@@ -1,0 +1,57 @@
+{
+    "TableName": "book",
+    "AttributeDefinitions": [
+    {
+      "AttributeName": "genre",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "id",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "published_year",
+      "AttributeType": "N"
+    },
+    {
+      "AttributeName": "author",
+      "AttributeType": "S"
+    }
+],
+"KeySchema": [
+        {
+            "AttributeName": "genre",
+            "KeyType": "HASH"
+        },
+        {
+            "AttributeName": "id",
+            "KeyType": "RANGE"
+        }
+    ],
+    "GlobalSecondaryIndexes": [
+        {
+            "IndexName": "author_published_year_index",
+            "KeySchema": [
+                {
+                    "AttributeName": "author",
+                    "KeyType": "HASH"
+                },
+                {
+                    "AttributeName": "published_year",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "Projection": {
+                "ProjectionType": "ALL"
+            },
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 1,
+                "WriteCapacityUnits": 1
+            }
+        }
+    ],
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 1,
+        "WriteCapacityUnits": 1
+    }
+}
