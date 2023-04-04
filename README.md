@@ -1,6 +1,6 @@
 <h1>BOOTCAMP BANCO PAN JAVA DEVELOPER</h1>
 
-<h3>Criar uma tabela no DynamoDB e aplicar as boas práticas.</h3>
+<h3>Criando uma tabela no DynamoDB e aplicando as boas práticas.</h3>
 <p>Para realizar este projeto, criei uma tabela chamada "ebook" e também utilizei as seguintes ferramentas:</p>
 
 - AWS DynamoDB
