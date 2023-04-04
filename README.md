@@ -125,3 +125,76 @@ aws dynamodb create-table --cli-input-json file://create-table.json
 aws dynamodb batch-write-item --request-items file://put-items.json
 ```
 
+  - Para consultar todos os livros publicados por um determinado autor em um determinado ano, usando o índice global secundário author_published_year_index:
+
+```
+aws dynamodb query \    
+    --table-name book \    
+    --index-name author_published_year_index \
+    --key-condition-expression "author = :author and published_year = :year" \     --expression-attribute-values '{":author":{"S":"George Orwell"},":year":{"N":"1949"}}'
+```
+
+A consulta acima retorna o seguinte resultado:
+```
+{
+    "Items": [
+        {
+            "publisher": {
+                "S": "Secker & Warburg"
+            },
+            "published_year": {
+                "N": "1949"
+            },
+            "id": {
+                "S": "003"
+            },
+            "genre": {
+                "S": "Science Fiction"
+            },
+            "author": {
+                "S": "George Orwell"
+            },
+            "title": {
+                "S": "1984"
+            }
+        }
+    ],
+    "Count": 1,
+    "ScannedCount": 1,
+    "ConsumedCapacity": null
+}
+```
+
+- Realizar consulta pela chave primária:
+
+```
+aws dynamodb get-item --table-name book --key '{"genre": {"S": "Classic"}, "id": {"S": "001"}}'
+```
+
+Resultado:
+
+```
+{
+    "Item": {
+        "publisher": {
+            "S": "Scribner"
+        },
+        "published_year": {
+            "N": "1925"
+        },
+        "id": {
+            "S": "001"
+        },
+        "genre": {
+            "S": "Classic"
+        },
+        "title": {
+            "S": "The Great Gatsby"
+        },
+        "author": {
+            "S": "F. Scott Fitzgerald"
+        }
+    }
+}
+```
+
