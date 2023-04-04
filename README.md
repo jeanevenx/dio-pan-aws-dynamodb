@@ -114,7 +114,8 @@ aws dynamodb batch-write-item --request-items file://put-items.json
 aws dynamodb query \    
     --table-name book \    
     --index-name author_published_year_index \
-    --key-condition-expression "author = :author and published_year = :year" \     --expression-attribute-values '{":author":{"S":"George Orwell"},":year":{"N":"1949"}}'
+    --key-condition-expression "author = :author and published_year = :year" \     
+    --expression-attribute-values '{":author":{"S":"George Orwell"},":year":{"N":"1949"}}'
 ```
 
 A consulta acima retorna o seguinte resultado:
