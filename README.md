@@ -7,18 +7,6 @@
 - AWS CLI
   
 <h4>A tabela tem a seguinte estrutura:</h4>
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-</style>
-</head>
-<body>
 <table>
   <tr>
     <th>Nome da coluna</th>
@@ -106,8 +94,7 @@ table {
   </tr>
 </table>
 
-</body>
-</html>
+</br></br></br>
 
 
 
