@@ -94,9 +94,7 @@
   </tr>
 </table>
 
-</br></br></br>
-
-
+</br></br>
 
 <p>Para criar a tabela e inserir itens nela, eu uso um arquivo JSON. Com o caminho do diretório atual do PowerShell na pasta em que o arquivo JSON está armazenado, executei o seguinte comando:</p>
 
